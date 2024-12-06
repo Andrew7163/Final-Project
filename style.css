@@ -1,0 +1,146 @@
+/* Default Light Mode Styles */
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #4CAF50;
+  --button-bg: #4CAF50;
+  --button-text: white;
+  --link-color: #007BFF;
+  --footer-bg: #f1f1f1;
+  --footer-text-color: #333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: var(--footer-bg);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+#theme-toggle {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#home, #about, #projects, #skills, #contact {
+  padding: 40px;
+}
+
+h1, h2 {
+  color: var(--primary-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+footer {
+  background-color: var(--footer-bg);
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p {
+  color: var(--footer-text-color);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  --background-color: #333;
+  --text-color: #ffffff;
+  --primary-color: #4CAF50;
+  --button-bg: #333;
+  --button-text: #ffffff;
+  --link-color: #80D0FF;
+  --footer-bg: #222;
+  --footer-text-color: #fff;
+}
+
+body.dark-mode a {
+  color: var(--link-color);
+}
+
+body.dark-mode footer {
+  background-color: var(--footer-bg);
+}
+
+body.dark-mode footer p {
+  color: var(--footer-text-color);
+}
+
+/* Button hover */
+#theme-toggle:hover {
+  opacity: 0.8;
+}
+
+/* Form Styles */
+form input, form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+form button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  footer {
+    position: static;
+  }
+}
